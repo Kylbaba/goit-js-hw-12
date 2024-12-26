@@ -4,11 +4,7 @@
   | default @import url()
   |============================
 */
-/* Common styles */
 @import url('./reset.css');
-
-/* Sections style */
-
 .form {
   display: flex;
   gap: 5px;
