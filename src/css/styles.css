@@ -6,3 +6,108 @@
 */
 /* Common styles */
 @import url('./reset.css');
+
+/* Sections style */
+
+.form {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 32px;
+}
+.input {
+  width: 240px;
+  height: 40px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding-left: 16px;
+  color: #2e2f42;
+}
+.input:hover {
+  border-color: black;
+  transition: all 0.5s;
+}
+
+.input:focus {
+  border-color: #4e75ff;
+  transition: all 0.5s;
+}
+.btn {
+  font-weight: 600;
+  width: 75px;
+  height: Hug 40px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  top: 268px;
+  left: 28px;
+  padding: 8px 16px 8px 16px;
+  gap: 10px;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: #6c8cff;
+  transition: all 0.5s;
+}
+
+.gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, calc((100% - 32px) / 3));
+  gap: 16px;
+  max-width: 1000px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.gallery div {
+  background: #f6f6f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+}
+
+.gallery img {
+  height: auto;
+  display: block;
+  width: 360px;
+}
+
+.gallery p {
+  margin: 0;
+  padding: 10px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.hidden {
+  display: none;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #df1111;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
