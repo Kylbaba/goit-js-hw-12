@@ -1,11 +1,16 @@
-// import './styles.css';
+import axios from 'axios';
 import { back } from './js/pixabay-api.js';
 import { gallery, clear } from './js/render-functions.js';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+let query = '';
+let page = 1;
+let parPage = 15; 
+
 const form = document.querySelector('.form');
 const loader = document.querySelector('.loader');
+const loadMoreButton = document.querySelector('.load-more');
 
 form.addEventListener('submit', event => {
   event.preventDefault();
