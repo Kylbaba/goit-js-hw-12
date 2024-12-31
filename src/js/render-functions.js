@@ -1,4 +1,3 @@
-import axios from 'axios';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -28,7 +27,7 @@ export function gallery(images) {
     `
     )
     .join('');
-  g.innerHTML = element;
+  g.innerHTML += element;
   if (!box) {
     box = new SimpleLightbox('.gallery-item', {
       captionsData: 'alt',
@@ -41,4 +40,13 @@ export function gallery(images) {
 
 export function clear() {
   g.innerHTML = '';
+}
+
+export function loadMore(visible) {
+  const button = document.querySelector('.load-more');
+  if (visible) {
+    button.style.display = 'block';
+  } else {
+    button.style.display = 'none';
+  }
 }
